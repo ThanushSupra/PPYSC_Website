@@ -21,7 +21,11 @@ export default function Navbar() {
             label: "Gallery"
         }, 
         { 
-            href: "/",
+            href: "/", 
+            label: "Contact"
+        },
+        { 
+            href: "/login",
             label: "Login"
         }, 
         { 
@@ -32,12 +36,12 @@ export default function Navbar() {
     ];
 
     return ( 
-        <NavigationMenu className="w-full left-240" >
+        <NavigationMenu className="w-full left-217 top-0.5" >
             <NavigationMenuList className="w-full flex justify-between">
 
                 {pages.map((item,key) => ( 
                     <NavigationMenuLink key={key} asChild className ="">
-                        <Link href={item.href} className="flex h-12 items-center justify-center font-medium hover:underline transition mr-2.5 ml-2.5 pl-2.5 pr-2.5">{item.label}</Link>
+                        <Link href={item.href} className="flex items-center justify-center font-medium pl-5 pr-5">{item.label}</Link>
                     </NavigationMenuLink>
                 ))}
 
