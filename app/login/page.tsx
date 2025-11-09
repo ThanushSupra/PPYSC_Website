@@ -14,11 +14,12 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegistrationSchema } from "@/lib/schema";
 import type { z } from "zod";
+import Link from "next/link";
 
 
 export default function login() {
   
-  
+    
     return (
     <div className="flex items-center justify-center min-h-screen">
         <Card className="w-full max-w-sm">
@@ -28,7 +29,9 @@ export default function login() {
             Enter your email below to login to your account
             </CardDescription>
             <CardAction>
-            <Button variant="link">Sign Up</Button>
+            <Button variant="link" asChild>
+                <Link href="/signup">Sign Up</Link>
+            </Button>
             </CardAction>
         </CardHeader>
         <CardContent>
@@ -46,12 +49,12 @@ export default function login() {
                 <div className="grid gap-2">
                 <div className="flex items-center">
                     <Label htmlFor="password">Password</Label>
-                    <a
-                    href="#"
+                    <Link
+                    href="/forgotPassword"
                     className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
                     >
                     Forgot your password?
-                    </a>
+                    </Link>
                 </div>
                 <Input id="password" type="password" required />
                 </div>
