@@ -18,7 +18,6 @@ import Link from "next/link";
 
 export default function signup() {
   
-    
     return (
     <div className="flex items-center justify-center min-h-screen">
         <Card className="w-full max-w-sm">
@@ -52,6 +51,7 @@ export default function signup() {
                         <Input id="firstName" type="text" required />
                     </div>
 
+                    
                     <div className="grid gap-2">
                         <Label htmlFor="email">Email</Label>
                         <Input

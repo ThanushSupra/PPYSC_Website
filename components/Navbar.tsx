@@ -29,7 +29,7 @@ export default function Navbar() {
             label: "Login"
         }, 
         { 
-            href: "/",
+            href: "/onlineRegistration",
             label: "Online Registration"
         }, 
 

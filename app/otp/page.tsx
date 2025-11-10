@@ -16,6 +16,7 @@ import {
   import { REGEXP_ONLY_DIGITS } from "input-otp"
 
 import { useState } from "react";
+import Link from "next/link"
 
 export default function Otp() {
 
@@ -63,8 +64,8 @@ export default function Otp() {
         </CardContent>
 
         <CardFooter className="flex-col gap-2">
-            <Button type="submit" className="w-full">
-            Verify OTP
+            <Button type="submit" className="w-full" asChild>
+                <Link href="/">Verify OTP</Link>
             </Button>
         </CardFooter>
         </Card> 
